@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CardList from "../components/CardList";
-import searchPage from "./search/page";
+import searchPage from "./search/[keyword]/page";
 import { api_key } from "../utils/helpers";
 import Header from "@/components/CardList/header";
 
@@ -25,7 +25,7 @@ const Home = async () => {
     <section>
       <Header title={'Trending Movies'} linkRef={"/trending"} linkTitle={'Liat Semua'} />
       <CardList api={popularMovie} />
-      <Header title={'Upcoming Movies'} linkRef={"/upcoming"} linkTitle={'Liat Semua'} />
+      <Header title={'Coming Soon'} linkRef={"/upcoming"} linkTitle={'Liat Semua'} />
       <CardList api={upcomingMovie} />
     </section>
     </>
