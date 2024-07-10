@@ -19,3 +19,10 @@ img {
 img:hover {
     scale: 102%;
 } 
+
+.gradient-text {
+    background: linear-gradient(90deg,#FFF323, #D4AC2B );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
