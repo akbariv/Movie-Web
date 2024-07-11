@@ -23,7 +23,7 @@ const Home = async () => {
   return (
     <>
     <section>
-      <Header title={'Trending Movies'} linkRef={"/trending"} linkTitle={'Liat Semua'} />
+      <Header title={'Trending Movies'} linkRef={"/trending"} linkTitle={'See All'} />
       <CardList api={popularMovie} />
       <Header title={'Coming Soon'}/>
       <CardList api={upcomingMovie} />
