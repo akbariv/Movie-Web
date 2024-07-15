@@ -4,7 +4,7 @@ import searchPage from "./search/[keyword]/page";
 import { api_key } from "../helpers/helpers";
 import Header from "@/components/CardList/header";
 
-const Home = async () => {
+const page = async () => {
   
   const popularResponse = await fetch(
     `${process.env.NEXT_PUBLIC_URL_BASE}/movie/popular?language=en-US&page=1`,
@@ -32,4 +32,4 @@ const Home = async () => {
   );
 };
 
-export default Home;
+export default page;
