@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import HeaderMenu from '@/components/Utilities/HeaderMenu';
 import Pagination from '@/components/Utilities/Pagination';
-import { api_key } from '@/helpers/helpers';
+import { api_key, getPopularMovies } from '@/helpers/helpers';
 import CardList from '@/components/CardList';
 
 const page = () => {
@@ -11,12 +11,8 @@ const page = () => {
   const [popularMovies,setPopularMovie] = useState([]);
 
   const fetchData = async () => {
-    const popularResponse = await fetch(
-      `${process.env.NEXT_PUBLIC_URL_BASE}/movie/popular?language=en-US&page=${page}`,
-      api_key
-    );
-    const data = await popularResponse.json();
-    setPopularMovie(data.results);
+    const popularResponse = await getPopularMovies(page);
+    setPopularMovie(popularResponse);
   }
 
   useEffect(() => {
