@@ -13,10 +13,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${gabarito.className} bg-color-dark`} suppressHydrationWarning={true}>
-        <NavBar/>
+      <body
+        className={`${gabarito.className}`}
+        style={{
+          background: 'linear-gradient(to bottom, #112031 65%, #000000)',
+          minHeight: '100vh'
+        }}
+        suppressHydrationWarning={true}
+      >
+        <NavBar />
         {children}
-        </body>
+      </body>
     </html>
   );
 }

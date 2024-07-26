@@ -36,3 +36,15 @@ export const getSearchMovie = async (query) => {
   const dataMovies = data.results;
   return dataMovies;
 };
+
+export const getMovieDetail = async (id) => {
+  const responseDetail = await fetch(`${process.env.NEXT_PUBLIC_URL_BASE}/movie/${id}?language=en-US`, api_key)
+  const data = await responseDetail.json();
+  return data;
+}
+
+export const getMovieImages = async (id) => {
+  const responseImages = await fetch(`${process.env.NEXT_PUBLIC_URL_BASE}/movie/${id}/images`, api_key)
+  const data = await responseImages.json();
+  return data;
+}
